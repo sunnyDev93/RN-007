@@ -1,0 +1,22 @@
+rootProject.name = 'The007Percent'
+include ':react-native-select-contact'
+project(':react-native-select-contact').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-select-contact/android')
+include ':react-native-select-contact'
+project(':react-native-select-contact').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-select-contact/android')
+include ':react-native-version-info'
+project(':react-native-version-info').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-version-info/android')
+include ':react-native-create-thumbnail'
+project(':react-native-create-thumbnail').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-create-thumbnail/android')
+include ':react-native-image-picker'
+project(':react-native-image-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-picker/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+include ':react-native-splash-screen'
+project(':react-native-splash-screen').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-splash-screen/android')
+
+include ':react-native-photo-view'
+project(':react-native-photo-view').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-photo-view/android')
+
+include ':@react-native-firebase_messaging'
+project(':@react-native-firebase_messaging').projectDir = new File(rootProject.projectDir, './../node_modules/@react-native-firebase/messaging/android')

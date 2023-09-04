@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "193461492755",
+    "firebase_url": "https://percent-25d5f.firebaseio.com",
+    "project_id": "percent-25d5f",
+    "storage_bucket": "percent-25d5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193461492755:android:1a82b1c0e83494a946b3e6",
+        "android_client_info": {
+          "package_name": "com.the007.the007percentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193461492755-0sdjkjt215865jbhg0vrnenfkftil0ev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRFlqbKgnaCOWejxLpvH9l9i4KyuWk8n4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193461492755-0sdjkjt215865jbhg0vrnenfkftil0ev.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "193461492755-kg46nvefs5sri3jlpcqojbik7jnqae4i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.007.007PercentApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

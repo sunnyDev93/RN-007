@@ -1,0 +1,68 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '10.0'
+
+target 'The007Percent' do
+#  use_frameworks!
+  config = use_native_modules!
+  
+  pod 'react-native-image-crop-tools', :path => '../node_modules/react-native-image-crop-tools'
+
+  use_react_native!(:path => config["reactNativePath"])
+
+  pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
+  pod 'react-native-create-thumbnail', :path => '../node_modules/react-native-create-thumbnail'
+
+  pod 'react-native-version-info', :path => '../node_modules/react-native-version-info'
+
+  target 'The007PercentTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+  
+  target 'The007Notification' do
+
+#    use_frameworks!    :linkage => :static
+    pod 'Firebase/Messaging', '~> 8.8.0' # eg 6.31.0
+  end
+
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable these next few lines.
+  
+#  use_flipper!({ 'Flipper' => '0.87.0' })
+#  post_install do |installer|
+#    flipper_post_install(installer)
+#  end
+end
+
+target 'The007Percent-tvOS' do
+  # Pods for The007Percent-tvOS
+
+  target 'The007Percent-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
+
+
+#post_install do |installer|
+#    installer.generated_projects.each do |project|
+#          project.targets.each do |target|
+#              target.build_configurations.each do |config|
+#                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+#               end
+#          end
+#   end
+#end
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'No'
+    end
+  end
+end
